@@ -16,6 +16,7 @@ self.addEventListener("push", function(event) {
           throw new Error('User not subscribed')
       })
       .then(function(res) {
+        console.log(test)
         return self.registration.showNotification('theGinApp', {
           icon: 'static/img/icons/android-chrome-192x192.png',
           body: 'test'
