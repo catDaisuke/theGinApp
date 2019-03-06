@@ -38,7 +38,7 @@ self.addEventListener("push", function(event) {
         console.log('test')
         return self.registration.showNotification('theGinApp', {
           icon: 'static/img/icons/android-chrome-192x192.png',
-          body: 'test'
+          body: 'メンバーの勤務先情報が更新されました！'
         })
       })
     )
