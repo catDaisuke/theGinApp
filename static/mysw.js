@@ -8,20 +8,24 @@ self.addEventListener("fetch", function(event) {
 
 self.addEventListener("push", function(event) {
     event.waitUntil(
-      self.registration.pushManager.getSubscription()
-        .then(function(subscription) {
-          if (subscription) {
-            return subscription.endpoint
-          }
-          throw new Error('User not subscribed')
+      self.registration.showNotification('theGinApp', {
+        icon: 'static/img/icons/android-chrome-192x192.png',
+        body: 'test'
       })
-      .then(function(res) {
-        console.log('test')
-        return self.registration.showNotification('theGinApp', {
-          icon: 'static/img/icons/android-chrome-192x192.png',
-          body: 'test'
-        })
-      })
+      // self.registration.pushManager.getSubscription()
+      //   .then(function(subscription) {
+      //     if (subscription) {
+      //       return subscription.endpoint
+      //     }
+      //     throw new Error('User not subscribed')
+      // })
+      // .then(function(res) {
+      //   console.log('test')
+      //   return self.registration.showNotification('theGinApp', {
+      //     icon: 'static/img/icons/android-chrome-192x192.png',
+      //     body: 'test'
+      //   })
+      // })
     )
 })
 
