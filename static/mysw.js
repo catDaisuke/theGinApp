@@ -26,7 +26,7 @@ self.addEventListener("push", function(event) {
 
 self.addEventListener("notificationclick", function(event) {
   event.notification.close()
-  clients.openWindow("/cameraApp_pwa/#/")
+  clients.openWindow("/theGinApp/#/member")
 }, false)
 
 // self.addEventListener('notificationclick', function (event) {
