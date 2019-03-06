@@ -16,10 +16,9 @@ self.addEventListener("push", function(event) {
           throw new Error('User not subscribed')
       })
       .then(function(res) {
-        console.log(res)
-        return self.registration.showNotification('theGinAppからのお知らせ', {
+        return self.registration.showNotification('theGinApp', {
           icon: 'static/img/icons/android-chrome-192x192.png',
-          body: '平原さんが銀座にaddしました'
+          body: 'test'
         })
       })
     )
