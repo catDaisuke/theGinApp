@@ -8,6 +8,7 @@
     messagingSenderId: "734668707013"
   };
   firebase.initializeApp(config);
+  var messaging = firebase.initializeApp(config).messaging();
   var serviceWorker = navigator.serviceWorker;
 
 messaging.requestPermission();
